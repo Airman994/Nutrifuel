@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NutriFuel - Suplementos Deportivos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --secondary: #3b82f6;
+      --background: #f9fafb;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background);
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--white);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .logo-container img {
+      height: 40px;
+      border-radius: 8px;
+    }
+
+    .logo-container h1 {
+      font-size: 1.5rem;
+      color: var(--primary);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: var(--secondary);
+      color: var(--white);
+    }
+
+    .container {
+      padding: 1rem;
+    }
+
+    h2 {
+      color: var(--primary);
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    .card {
+      background-color: var(--white);
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+      animation: fadeIn 0.6s ease-in-out both;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 0.8rem;
+      text-align: left;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    th {
+      background-color: var(--secondary);
+      color: var(--white);
+    }
+
+    a.btn {
+      display: inline-block;
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    a.btn:hover {
+      background-color: var(--secondary);
+    }
+
+    @keyframes fadeIn {
+      0% {opacity: 0; transform: translateY(20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="nutrifuel_logo.png" alt="NutriFuel Logo">
+      <h1>NutriFuel</h1>
+    </div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#contacto">Contáctame</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="inicio" class="card">
+      <h2>Bienvenido a NutriFuel</h2>
+      <p>Compara y descubre los mejores suplementos deportivos para alcanzar tus metas de forma saludable y eficiente.</p>
+    </section>
+
+    <section id="productos" class="card">
+      <h2>Proteínas Whey</h2>
+      <table>
+        <tr>
+          <th>Marca</th>
+          <th>Proteína/100g</th>
+          <th>Sabor</th>
+          <th>Precio</th>
+        </tr>
+        <tr>
+          <td><a href="#" class="btn">Optimum Nutrition</a></td>
+          <td>80g</td>
+          <td>Vainilla</td>
+          <td>€32 / 900g</td>
+        </tr>
+        <tr>
+          <td><a href="#" class="btn">MyProtein Impact</a></td>
+          <td>82g</td>
+          <td>Chocolate</td>
+          <td>€27 / 1kg</td>
+        </tr>
+        <tr>
+          <td><a href="#" class="btn">Dymatize ISO100</a></td>
+          <td>84g</td>
+          <td>Cookies & Cream</td>
+          <td>€39 / 900g</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Creatinas</h2>
+      <table>
+        <tr>
+          <th>Marca</th>
+          <th>Tipo</th>
+          <th>Dosis</th>
+          <th>Precio</th>
+        </tr>
+        <tr>
+          <td><a href="#" class="btn">Creapure (MyProtein)</a></td>
+          <td>Monohidrato</td>
+          <td>5g/día</td>
+          <td>€15 / 250g</td>
+        </tr>
+        <tr>
+          <td><a href="#" class="btn">Cell-Tech</a></td>
+          <td>Con carbohidratos</td>
+          <td>10g/día</td>
+          <td>€40 / 3kg</td>
+        </tr>
+        <tr>
+          <td><a href="#" class="btn">ON Micronized</a></td>
+          <td>Monohidrato</td>
+          <td>5g/día</td>
+          <td>€18 / 300g</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="contacto" class="card">
+      <h2>Contáctame</h2>
+      <p>¿Tienes dudas o quieres colaborar? Escríbeme a <strong>info@nutrifuelnutricion.com</strong> o sígueme en redes sociales.</p>
+    </section>
+  </main>
+</body>
+</html>
